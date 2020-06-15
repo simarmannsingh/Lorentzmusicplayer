@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>        
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">    
     <script src="jquery-1.10.2.min.js"></script>
+    
     <title>Music Player</title>
 </head>
 <body>
@@ -12,7 +13,7 @@
     </div>
     <div id="main">
         <div id="image">
-            <img src="Poster1.jpg" alt="">
+            <img src="Poster1.jpg" alt="source two">
         </div>
         <div id="player"> 
             <div id="songtitle"></div>
@@ -25,64 +26,9 @@
                 <div id="fill"></div>
                 <div id="handle"></div>
             </div>
+          
         </div>
     </div>
 </body>
-<script type="text/javascript">
-    
-    var songs = ["Song1.mp3","Song2.mp3","Song3.mp3"];
-    var poster = ["Poster1.jpg","Poster2.jpg","Poster3.jpg"];
-    
-    var songTitle = document.getElementById("songTitle");
-    var fillBar = document.getElementById("fill");
-    
-    var song = new Audio();
-    var currentSong = 0;
-
-    window.onload = playSong;       
-    function playSong(){        
-        song.src = songs[currentSong];        
-        songTitle.textContent = songs[currentSong];        
-        song.play();
-    }
-    
-    function playOrPauseSong(){        
-        if(song.paused){
-            song.play();
-            $("#play img").attr("src","Pause.png");
-        }
-        else{
-            song.pause();
-            $("#play img").attr("src","Play.png");
-        }
-    }
-    
-    song.addEventListener('timeupdate',()=>{        
-        var position = song.currentTime / song.duration;        
-        fillBar.style.width = position * 100 +'%';
-    });
-    
-
-    function next(){        
-        currentSong++;
-        if(currentSong > 2){
-            currentSong = 0;
-        }
-        playSong();
-        $("#play img").attr("src","Play.png");
-        $("#image img").attr("src",poster[currentSong]);
-        $("#bg img").attr("src",poster[currentSong]);
-    }
-
-    function pre(){        
-        currentSong--;
-        if(currentSong < 0){
-            currentSong = 2;
-        }
-        playSong();
-        $("#play img").attr("src","Pause.png");
-        $("#image img").attr("src",poster[currentSong]);
-        $("#bg img").attr("src",poster[currentSong]);
-    }
-</script>
+<script src="app.js"></script>
 </html>
