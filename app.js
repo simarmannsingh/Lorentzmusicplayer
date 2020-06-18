@@ -1,11 +1,11 @@
-var songs = ["Song1.mp3","Song2.mp3","Song3.mp3"];
-    var poster = ["Poster1.jpg","Poster2.jpg","Poster3.jpg"];
+let songs = ["Song1.mp3","Song2.mp3","Song3.mp3"];
+    let poster = ["Poster1.jpg","Poster2.jpg","Poster3.jpg"];
     
-    var songTitle = document.getElementById("songTitle");
-    var fillBar = document.getElementById("fill");
+    let songTitle = document.getElementById("songTitle");
+    let fillBar = document.getElementById("fill");
     
-    var song = new Audio();
-    var currentSong = 0;
+    let song = new Audio();
+    let currentSong = 0;
 
     window.onload = playSong;       
     function playSong(){        
@@ -26,7 +26,7 @@ var songs = ["Song1.mp3","Song2.mp3","Song3.mp3"];
     }
     
     song.addEventListener('timeupdate',()=>{        
-        var position = song.currentTime / song.duration;        
+        let position = song.currentTime / song.duration;        
         fillBar.style.width = position * 100 +'%';
     });
     

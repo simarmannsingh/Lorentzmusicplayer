@@ -8,15 +8,16 @@
 </head>
 <body>
     <div id="bg">
-        <div id="blackLayer"></div>
-        <img src="Poster1.jpg" alt="source one">
+        <div id="backLayer"></div>
+        <img src="Poster1.jpg" alt="source one">        
     </div>
+    
     <div id="main">
         <div id="image">
             <img src="Poster1.jpg" alt="source two">
         </div>
         <div id="player"> 
-            <div id="songtitle"></div>
+            <div id="songTitle">Demo</div>
             <div id="buttons">
                 <button id="pre" onclick="pre()"><img src="Pre.png" height="80%" width="80%" alt="previous" /></button>
                 <button id="play" onclick="playOrPauseSong()"><img src="Play.png" height="100%" alt="play" /></button>
@@ -25,10 +26,18 @@
             <div id="seek-bar">
                 <div id="fill"></div>
                 <div id="handle"></div>
-            </div>
-          
+            </div>          
         </div>
     </div>
+    <div class="vertical-menu">
+        <a href="#" class="active">Song 1</a>
+        <a href="#">Song 2</a>
+        <a href="#">Song 3</a>
+        <a href="#">Song 4</a>
+        <a href="#">Song 5</a>
+    </div>
+
+    
 </body>
 <script src="app.js"></script>
 </html>
