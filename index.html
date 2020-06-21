@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <script src="jquery-1.10.2.min.js"></script>
+
+    <title>Music Player</title>
+  </head>
+  <body>
+    <div id="bg">
+      <div id="backLayer"></div>
+      <img src="Poster1.jpg" alt="source one" />
+    </div>
+
+    <div id="main">
+      <div id="image">
+        <img src="Poster1.jpg" alt="source two" />
+      </div>
+      <div id="player">
+        <div id="songTitle">Demo</div>
+        <div id="buttons">
+          <button id="pre" onclick="pre()">
+            <img src="Pre.png" height="80%" width="80%" alt="previous" />
+          </button>
+          <button id="play" onclick="playOrPauseSong()">
+            <img src="Play.png" height="100%" alt="play" />
+          </button>
+          <button id="next" onclick="next()">
+            <img src="Next.png" height="80%" width="80%" alt="next" />
+          </button>
+        </div>
+        <div id="seek-bar">
+          <div id="fill"></div>
+          <div id="handle"></div>
+        </div>
+      </div>
+    </div>
+    <div class="vertical-menu">
+      <h1>Playlist</h1>
+      <div id="playlist" class="playlist">
+        <button id="0" onclick="currSong(0)" class="active">
+          Let me Love you
+        </button>
+        <button id="1" onclick="currSong(1)">Cheap Thrills (Sia)</button>
+        <button id="2" onclick="currSong(2)">Khaab (Akhil)</button>
+        <button id="3" onclick="currSong(3)">Right Round (Florida)</button>
+      </div>
+    </div>
+  </body>
+  <script src="app.js"></script>
+</html>
